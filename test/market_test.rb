@@ -205,5 +205,6 @@ class MarketTest < Minitest::Test
 
     assert_equal false, market.sell(item1, 200)
     assert_equal false, market.sell(item5, 1)
+    assert_equal true, market.sell(item4, 5)
   end
 end

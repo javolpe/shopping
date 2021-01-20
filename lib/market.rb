@@ -55,7 +55,10 @@ class Market
 
   def sell(item, quantity)
     if total_inventory[item].nil? || total_inventory[item][:quantity] < quantity
-      false 
+      false
+    else
+      total_inventory[item][:vendors][0].inventory[item] - quantity
+      true
     end 
   end
 end
