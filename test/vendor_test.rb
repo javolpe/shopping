@@ -12,4 +12,10 @@ class VendorTest < Minitest::Test
     expected = {}
     assert_equal expected, vendor.inventory
   end
+
+  def test_vendor_check_stock
+    vendor = Vendor.new("Rocky Mountain Fresh")
+
+    assert_equal 0, vendor.check_stock(item1)
+  end
 end
