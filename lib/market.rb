@@ -44,7 +44,8 @@ class Market
     items
   end
 
-  
-
-
+  def sorted_item_list
+    items = total_inventory.keys.map {|item| item.name}
+    items = items.sort
+  end
 end
