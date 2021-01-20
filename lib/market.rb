@@ -6,4 +6,6 @@ class Market
      @name = name
      @vendors = []
   end
+
+  
 end
