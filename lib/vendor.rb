@@ -22,4 +22,10 @@ class Vendor
       inventory[item] += quantity
     end
   end
+
+  def potential_revenue
+    inventory.reduce(0) do |sum, item|
+      sum += item[0].price * item[1]
+    end
+  end
 end
