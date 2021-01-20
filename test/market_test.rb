@@ -4,6 +4,7 @@ require './lib/item'
 require './lib/vendor'
 require './lib/market'
 require 'pry'
+require 'date'
 
 class MarketTest < Minitest::Test 
   def test_it_exists_and_has_attributes
@@ -172,5 +173,11 @@ class MarketTest < Minitest::Test
     market.add_vendor(vendor3)
     expected = ["Banana Nice Cream", "Peach", "Peach-Raspberry Nice Cream", "Tomato"]
     assert_equal expected, market.sorted_item_list
+  end
+
+  def test_market_has_date
+    market = Market.new("South Pearl Street Farmers Market")
+
+    assert_equal "20/01/2021", market.date
   end
 end
