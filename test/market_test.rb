@@ -87,5 +87,4 @@ class MarketTest < Minitest::Test
     assert_equal [vendor2], market.vendors_that_sell(item4)
     assert_equal [vendor1], market.vendors_that_sell(item2)
   end
-  
 end
