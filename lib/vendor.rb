@@ -14,4 +14,12 @@ class Vendor
       inventory[item]
     end
   end
+
+  def stock(item, quantity) 
+    if inventory[item].nil?
+      inventory[item] = quantity
+    else 
+      inventory[item] += quantity
+    end
+  end
 end
