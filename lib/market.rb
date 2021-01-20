@@ -33,5 +33,16 @@ class Market
     inventory
   end
 
+  def overstocked_items
+    items = []
+    total_inventory.select do |item, hash|
+      if hash[:quantity] > 50
+        items << item
+      end
+      #better enum here? couldn't isolate item with find_all/select 
+    end
+    items
+  end
+
 
 end
