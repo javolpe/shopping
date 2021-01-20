@@ -15,6 +15,7 @@ class VendorTest < Minitest::Test
 
   def test_vendor_check_stock
     vendor = Vendor.new("Rocky Mountain Fresh")
+    item1 = Item.new({name: 'Peach', price: "$0.75"})
 
     assert_equal 0, vendor.check_stock(item1)
   end
