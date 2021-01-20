@@ -52,4 +52,10 @@ class Market
     items = total_inventory.keys.map {|item| item.name}
     items = items.sort
   end
+
+  def sell(item, quantity)
+    if total_inventory[item].nil? || total_inventory[item][:quantity] < quantity
+      false 
+    end 
+  end
 end

@@ -204,5 +204,6 @@ class MarketTest < Minitest::Test
     market.add_vendor(vendor3)
 
     assert_equal false, market.sell(item1, 200)
+    assert_equal false, market.sell(item5, 1)
   end
 end
