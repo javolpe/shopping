@@ -15,5 +15,7 @@ class Market
     vendors.map{|vendor| vendor.name}
   end
 
+  
+
 
 end
